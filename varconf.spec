@@ -96,11 +96,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_bindir}/varconf-config
+%attr(755,root,root) %{_bindir}/varconf-config
 %{_includedir}/varconf
 %{_libdir}/lib*.la
 %{_aclocaldir}/varconf.m4
-%{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/lib*.so
 
 %files static
 %defattr(644,root,root,755)
