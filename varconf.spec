@@ -5,13 +5,6 @@ Version:	0.5.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://victor.worldforge.org/pub/worldforge/libs/varconf/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -37,13 +30,6 @@ lub jednej globalnej instancji konfiguracji.
 Summary:	Header files for varconf development
 Summary(pl):	Pliki nagЁСwkowe do tworzenia programСw z u©yciem varconf
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Requires:	libsigc++-devel
 
@@ -65,13 +51,6 @@ u©yciem biblioteki varconf.
 Summary:	Static libraries for varconf development
 Summary(pl):	Statyczne biblioteki varconf
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
