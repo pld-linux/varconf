@@ -2,11 +2,12 @@ Summary:	A config handling library
 Summary(pl):	Biblioteka obs³uguj±ca konfiguracjê
 Name:		varconf
 Version:	0.5.4
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://victor.worldforge.org/pub/worldforge/libs/varconf/%{name}-%{version}.tar.gz
 # Source0-md5:	0a23cf727b8d8e55a60129fa9605c23b
+Patch0:		%{name}-ac.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libsigc++1-devel
@@ -68,6 +69,7 @@ Ten pakiet zawiera statyczne biblioteki varconf.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
