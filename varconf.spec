@@ -1,14 +1,14 @@
 Summary:	A config handling library
 Summary(pl):	Biblioteka obs³uguj±ca konfiguracjê
 Name:		varconf
-Version:	0.5.0
-Release:	2
+Version:	0.5.4
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://victor.worldforge.org/pub/worldforge/libs/varconf/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libsigc++-devel
+BuildRequires:	libsigc++1-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,7 +31,7 @@ Summary:	Header files for varconf development
 Summary(pl):	Pliki nag³ówkowe do tworzenia programów z u¿yciem varconf
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	libsigc++-devel
+Requires:	libsigc++1-devel
 
 %description devel
 varconf is a configuration system originally designed for the STAGE
@@ -96,8 +96,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%{_bindir}/varconf-config
 %{_includedir}/varconf
 %attr(755,root,root) %{_libdir}/lib*.la
+%{_aclocaldir}/varconf.m4
 %{_libdir}/lib*.so
 
 %files static
