@@ -98,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_bindir}/varconf-config
 %{_includedir}/varconf
-%attr(755,root,root) %{_libdir}/lib*.la
+%{_libdir}/lib*.la
 %{_aclocaldir}/varconf.m4
 %{_libdir}/lib*.so
 
