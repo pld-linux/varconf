@@ -5,9 +5,10 @@ Version:	0.5.4
 Release:	3
 License:	LGPL
 Group:		Libraries
-Source0:	ftp://victor.worldforge.org/pub/worldforge/libs/varconf/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.worldforge.org/pub/worldforge/libs/varconf/%{name}-%{version}.tar.gz
 # Source0-md5:	0a23cf727b8d8e55a60129fa9605c23b
 Patch0:		%{name}-ac.patch
+URL:		http://www.worldforge.org/dev/eng/libraries/varconf/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libsigc++1-devel
@@ -32,7 +33,7 @@ lub jednej globalnej instancji konfiguracji.
 Summary:	Header files for varconf development
 Summary(pl):	Pliki nag³ówkowe do tworzenia programów z u¿yciem varconf
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libsigc++1-devel
 
 %description devel
@@ -53,7 +54,7 @@ u¿yciem biblioteki varconf.
 Summary:	Static libraries for varconf development
 Summary(pl):	Statyczne biblioteki varconf
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 varconf is a configuration system originally designed for the STAGE
@@ -72,7 +73,6 @@ Ten pakiet zawiera statyczne biblioteki varconf.
 %patch0 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoheader}
@@ -84,7 +84,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -100,10 +101,10 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/varconf-config
-%{_includedir}/varconf
-%{_libdir}/lib*.la
-%{_aclocaldir}/varconf.m4
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
+%{_includedir}/varconf
+%{_aclocaldir}/varconf.m4
 
 %files static
 %defattr(644,root,root,755)
