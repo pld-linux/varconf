@@ -71,8 +71,8 @@ Ten pakiet zawiera statyczne biblioteki varconf.
 %build
 rm -f missing
 %{__libtoolize}
-aclocal
-autoheader
+%{__aclocal}
+%{__autoheader}
 %{__autoconf}
 %{__automake}
 %configure
