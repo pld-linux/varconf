@@ -2,7 +2,7 @@ Summary:	A config handling library
 Summary(pl):	Biblioteka obs³uguj±ca konfiguracjê
 Name:		varconf
 Version:	0.5.4
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://victor.worldforge.org/pub/worldforge/libs/varconf/%{name}-%{version}.tar.gz
