@@ -15,8 +15,8 @@ Group(uk):	Б╕бл╕отеки
 Source0:	ftp://victor.worldforge.org/pub/worldforge/libs/varconf/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
 BuildRequires:	libsigc++-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -90,11 +90,12 @@ Ten pakiet zawiera statyczne biblioteki varconf.
 %setup -q
 
 %build
+rm -f missing
+libtoolize --copy --force
 aclocal
 autoheader
-libtoolize --automake --copy --force
-automake --add-missing --copy --gnu --force
 autoconf
+automake -a -c
 %configure
 %{__make}
 
