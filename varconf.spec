@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://victor.worldforge.org/pub/worldforge/libs/varconf/%{name}-%{version}.tar.gz
+# Source0-md5:	0a23cf727b8d8e55a60129fa9605c23b
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libsigc++1-devel
