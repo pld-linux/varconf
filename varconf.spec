@@ -1,17 +1,17 @@
 Summary:	A config handling library
 Summary(pl):	Biblioteka obs³uguj±ca konfiguracjê
 Name:		varconf
-Version:	0.5.4
-Release:	3
+Version:	0.6.4
+Release:	0.1
 License:	LGPL
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/worldforge/%{name}-%{version}.tar.gz
-# Source0-md5:	0a23cf727b8d8e55a60129fa9605c23b
+Source0:	http://dl.sourceforge.net/worldforge/%{name}-%{version}.tar.bz2
+# Source0-md5:	19c8f0c4e39df35769e4c1d20e6233bc
 Patch0:		%{name}-ac.patch
 URL:		http://www.worldforge.org/dev/eng/libraries/varconf/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libsigc++1-devel
+BuildRequires:	libsigc++-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -70,7 +70,7 @@ Ten pakiet zawiera statyczne biblioteki varconf.
 
 %prep
 %setup -q
-%patch0 -p1
+#patch0 -p1
 
 %build
 %{__libtoolize}
@@ -100,12 +100,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/varconf-config
+#attr(755,root,root) %{_bindir}/varconf-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
-%{_includedir}/varconf
-%{_aclocaldir}/varconf.m4
+%{_includedir}/varconf-1.0/varconf
+%{_pkgconfigdir}/varconf-1.0.pc
+#{_aclocaldir}/varconf.m4
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+#{_libdir}/lib*.a
