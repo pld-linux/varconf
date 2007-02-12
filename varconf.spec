@@ -1,5 +1,5 @@
 Summary:	A config handling library
-Summary(pl):	Biblioteka obs≥uguj±ca konfiguracjÍ
+Summary(pl.UTF-8):   Biblioteka obs≈ÇugujƒÖca konfiguracjƒô
 Name:		varconf
 Version:	0.6.4
 Release:	0.1
@@ -22,16 +22,16 @@ and environment variables. It supports callbacks through libsigc++ and
 can store configuration data in configuration objects or one global
 configuration instance.
 
-%description -l pl
+%description -l pl.UTF-8
 varconf to system konfiguracji oryginalnie zaprojektowany dla serwera
-STAGE. varconf moøe parsowaÊ pliki konfiguracyjne, parametry z linii
-poleceÒ i zmienne ∂rodowiskowe. Obs≥uguje callbacki poprzez libsigc++
-oraz moøe zapisywaÊ dane z konfiguracji w obiektach konfiguracyjnych
+STAGE. varconf mo≈ºe parsowaƒá pliki konfiguracyjne, parametry z linii
+polece≈Ñ i zmienne ≈õrodowiskowe. Obs≈Çuguje callbacki poprzez libsigc++
+oraz mo≈ºe zapisywaƒá dane z konfiguracji w obiektach konfiguracyjnych
 lub jednej globalnej instancji konfiguracji.
 
 %package devel
 Summary:	Header files for varconf development
-Summary(pl):	Pliki nag≥Ûwkowe do tworzenia programÛw z uøyciem varconf
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe do tworzenia program√≥w z u≈ºyciem varconf
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libsigc++1-devel
@@ -46,13 +46,13 @@ configuration instance.
 This package contains the header files needed to develop programs that
 use these varconf.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag≥Ûwkowe potrzebne do tworzenia programÛw z
-uøyciem biblioteki varconf.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nag≈Ç√≥wkowe potrzebne do tworzenia program√≥w z
+u≈ºyciem biblioteki varconf.
 
 %package static
 Summary:	Static libraries for varconf development
-Summary(pl):	Statyczne biblioteki varconf
+Summary(pl.UTF-8):   Statyczne biblioteki varconf
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -65,7 +65,7 @@ configuration instance.
 
 This package contains the static varconf libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Ten pakiet zawiera statyczne biblioteki varconf.
 
 %prep
