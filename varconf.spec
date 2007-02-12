@@ -1,5 +1,5 @@
 Summary:	A config handling library
-Summary(pl.UTF-8):   Biblioteka obsługująca konfigurację
+Summary(pl.UTF-8):	Biblioteka obsługująca konfigurację
 Name:		varconf
 Version:	0.6.4
 Release:	0.1
@@ -31,7 +31,7 @@ lub jednej globalnej instancji konfiguracji.
 
 %package devel
 Summary:	Header files for varconf development
-Summary(pl.UTF-8):   Pliki nagłówkowe do tworzenia programów z użyciem varconf
+Summary(pl.UTF-8):	Pliki nagłówkowe do tworzenia programów z użyciem varconf
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libsigc++1-devel
@@ -52,7 +52,7 @@ użyciem biblioteki varconf.
 
 %package static
 Summary:	Static libraries for varconf development
-Summary(pl.UTF-8):   Statyczne biblioteki varconf
+Summary(pl.UTF-8):	Statyczne biblioteki varconf
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
