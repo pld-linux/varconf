@@ -9,10 +9,11 @@ Source0:	http://dl.sourceforge.net/worldforge/%{name}-%{version}.tar.bz2
 # Source0-md5:	24af36732c1c3addca4de60a10a6e945
 Patch0:		%{name}-gcc43.patch
 URL:		http://www.worldforge.org/dev/eng/libraries/varconf/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	libsigc++-devel
+BuildRequires:	libsigc++-devel >= 2.0.0
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,7 +35,7 @@ Summary:	Header files for varconf development
 Summary(pl.UTF-8):	Pliki nagłówkowe do tworzenia programów z użyciem varconf
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libsigc++1-devel
+Requires:	libsigc++-devel >= 2.0.0
 
 %description devel
 varconf is a configuration system originally designed for the STAGE
