@@ -3,12 +3,11 @@ Summary(pl.UTF-8):	Biblioteka obsługująca konfigurację
 Name:		varconf
 Version:	0.6.5
 Release:	0.1
-License:	LGPL
+License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/worldforge/%{name}-%{version}.tar.bz2
 # Source0-md5:	24af36732c1c3addca4de60a10a6e945
-Patch0:		%{name}-ac.patch
-Patch1:		%{name}-gcc43.patch
+Patch0:		%{name}-gcc43.patch
 URL:		http://www.worldforge.org/dev/eng/libraries/varconf/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -71,8 +70,7 @@ Ten pakiet zawiera statyczne biblioteki varconf.
 
 %prep
 %setup -q
-#patch0 -p1
-%patch1 -p1
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -80,7 +78,8 @@ Ten pakiet zawiera statyczne biblioteki varconf.
 %{__autoheader}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--enable-static
 %{__make}
 
 %install
@@ -98,17 +97,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libvarconf-1.0.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libvarconf-1.0.so.6
 
 %files devel
 %defattr(644,root,root,755)
-#attr(755,root,root) %{_bindir}/varconf-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_libdir}/lib*.so.6
-%{_includedir}/varconf-1.0/varconf
+%attr(755,root,root) %{_libdir}/libvarconf-1.0.so
+%{_libdir}/libvarconf-1.0.la
+%{_includedir}/varconf-1.0
 %{_pkgconfigdir}/varconf-1.0.pc
-#{_aclocaldir}/varconf.m4
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.la
+%{_libdir}/libvarconf-1.0.a
